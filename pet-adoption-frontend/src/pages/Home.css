@@ -1,0 +1,681 @@
+.home-container {
+    min-height: 100vh;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    min-width: 160px;
+}
+
+.btn-primary {
+    background: #ff6b6b;
+    color: white;
+    border: 2px solid #ff6b6b;
+}
+
+.btn-primary:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+/* Hero Image Horizontal Scroll - PERFECT SEAMLESS */
+.hero-image-scroll {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hero-scroll-track {
+    display: flex;
+    animation: heroScrollSeamless 20s linear infinite;
+    width: max-content;
+}
+
+.hero-scroll-track:hover {
+    animation-play-state: paused;
+}
+
+.hero-scroll-item {
+    flex: 0 0 300px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.hero-scroll-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+.hero-scroll-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hero-scroll-item:hover .hero-scroll-image {
+    transform: scale(1.1);
+}
+
+.hero-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Perfect Seamless Hero Scroll Animation */
+@keyframes heroScrollSeamless {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-320px * 4)); /* Scroll exactly one set of 4 items */
+    }
+}
+
+/* Featured Pets Horizontal Scrolling Section - PERFECT SEAMLESS */
+.featured-pets-section {
+    padding: 6rem 0;
+    background: #f8f9fa;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Horizontal Scroll Container - PERFECT SEAMLESS */
+.horizontal-scroll-container {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+    mask: linear-gradient(
+            90deg,
+            transparent,
+            white 10%,
+            white 90%,
+            transparent
+    );
+}
+
+.scroll-track {
+    display: flex;
+    animation: scrollHorizontalSeamless 35s linear infinite;
+    width: max-content;
+}
+
+.scroll-track:hover {
+    animation-play-state: paused;
+}
+
+/* Large Pet Cards */
+.pet-card-large {
+    flex: 0 0 400px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    border: 1px solid #e9ecef;
+    margin: 0 15px;
+}
+
+.pet-card-large:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.pet-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.pet-image-large {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.pet-card-large:hover .pet-image-large {
+    transform: scale(1.1);
+}
+
+.image-placeholder-large {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Pet Overlay */
+.pet-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.pet-card-large:hover .pet-overlay {
+    opacity: 1;
+}
+
+.pet-info-overlay {
+    color: white;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.pet-card-large:hover .pet-info-overlay {
+    transform: translateY(0);
+}
+
+.pet-info-overlay h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.pet-info-overlay p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.pet-age {
+    background: #ff6b6b;
+    padding: 0.3rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.pet-status-large {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #27ae60;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+/* Pet Details */
+.pet-details {
+    padding: 2rem;
+    text-align: center;
+}
+
+.pet-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.pet-breed {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.pet-location {
+    color: #6c757d;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* Perfect Seamless Scroll Animation for Featured Pets */
+@keyframes scrollHorizontalSeamless {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-430px * 6)); /* Scroll exactly one set of 6 items */
+    }
+}
+
+/* Perfect Seamless Scroll Animation for Hero */
+@keyframes heroScrollSeamless {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-320px * 4)); /* Scroll exactly one set of 4 items */
+    }
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    text-align: center;
+    margin-top: 2rem;
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.scroll-indicator span {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Features Section with Images */
+.features-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.features-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.feature-image-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-image {
+    transform: scale(1.1);
+}
+
+.feature-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.feature-card p {
+    color: #6c757d;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Stats Section */
+.stats-section {
+    background: #2c3e50;
+    color: white;
+    padding: 4rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-item h3 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: #3498db;
+    font-weight: 700;
+}
+
+.stat-item p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 600;
+}
+
+/* Quick Actions with Emojis */
+.quick-actions {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.quick-actions h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.action-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.action-card:hover {
+    transform: translateY(-8px);
+    border-color: #3498db;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.action-emoji {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.action-card:hover .action-emoji {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.action-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.action-card p {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+        padding: 4rem 1rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .pet-card-large {
+        flex: 0 0 350px;
+        margin: 0 10px;
+    }
+
+    .pet-image-wrapper {
+        height: 250px;
+    }
+
+    .hero-scroll-item {
+        flex: 0 0 250px;
+        height: 250px;
+        margin: 0 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 200px;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .pet-card-large {
+        flex: 0 0 300px;
+        margin: 0 8px;
+    }
+
+    .pet-image-wrapper {
+        height: 200px;
+    }
+
+    .hero-scroll-item {
+        flex: 0 0 200px;
+        height: 200px;
+        margin: 0 6px;
+    }
+
+    .features-grid,
+    .actions-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        padding: 3rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .pet-card-large {
+        flex: 0 0 280px;
+        margin: 0 5px;
+    }
+
+    .pet-image-wrapper {
+        height: 180px;
+    }
+
+    .hero-scroll-item {
+        flex: 0 0 180px;
+        height: 180px;
+        margin: 0 4px;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* Manual scroll for touch devices */
+@media (hover: none) {
+    .scroll-track,
+    .hero-scroll-track {
+        animation: none;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .scroll-track::-webkit-scrollbar,
+    .hero-scroll-track::-webkit-scrollbar {
+        display: none;
+    }
+}

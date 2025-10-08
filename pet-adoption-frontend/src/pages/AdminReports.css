@@ -1,0 +1,310 @@
+/* frontend/src/pages/AdminReports.css */
+.admin-reports {
+    padding: 2rem 0;
+    min-height: 80vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.admin-reports .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.admin-reports h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+
+.tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 2rem;
+    background: white;
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tab {
+    flex: 1;
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #7f8c8d;
+}
+
+.tab.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.tab-content {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    min-height: 400px;
+}
+
+.report-section h3 {
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 1rem;
+}
+
+.report-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.report-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.report-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: rgba(255,255,255,0.3);
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+}
+
+.report-card h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.report-card .stat {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Different colors for different stat types */
+.report-card:nth-child(1) { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.report-card:nth-child(2) { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.report-card:nth-child(3) { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.report-card:nth-child(4) { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+
+.stat.pending { color: #fff3cd; }
+.stat.approved { color: #d4edda; }
+.stat.rejected { color: #f8d7da; }
+.stat.available { color: #d1edff; }
+.stat.adopted { color: #d1f7ff; }
+
+/* Charts and additional report styles */
+.report-details {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+}
+
+.report-details h4 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.report-list {
+    list-style: none;
+    padding: 0;
+}
+
+.report-list li {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ecf0f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.report-list li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .admin-reports .container {
+        padding: 0 1rem;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        text-align: center;
+    }
+
+    .report-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .tab-content {
+        padding: 1.5rem;
+    }
+
+    .report-card {
+        padding: 1.5rem;
+    }
+
+    .report-card .stat {
+        font-size: 2.5rem;
+    }
+    /* Enhanced Table Styles */
+    .details-table {
+        margin-top: 1rem;
+        overflow-x: auto;
+    }
+
+    .details-table table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .details-table th,
+    .details-table td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .details-table th {
+        background: #f8f9fa;
+        font-weight: 600;
+        color: #2c3e50;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+    }
+
+    .details-table tr:hover {
+        background: #f8f9fa;
+    }
+
+    /* Trends and Breakdown Grids */
+    .trends-grid,
+    .breakdown-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .trend-item,
+    .breakdown-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background: white;
+        border-radius: 8px;
+        border-left: 4px solid #3498db;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .trend-month,
+    .breakdown-type {
+        font-weight: 600;
+        color: #2c3e50;
+    }
+
+    .trend-count,
+    .breakdown-count {
+        color: #6c757d;
+        font-weight: 500;
+    }
+
+    /* Profile Header Styles */
+    .profile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #e9ecef;
+    }
+
+    .profile-header h2 {
+        margin: 0;
+        color: #2c3e50;
+    }
+
+    /* Enhanced Status Badges */
+    .status-badge {
+        padding: 0.4rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    .status-pending { background: #fff3cd; color: #856404; }
+    .status-approved { background: #d4edda; color: #155724; }
+    .status-rejected { background: #f8d7da; color: #721c24; }
+    .status-available { background: #d1edff; color: #004085; }
+    .status-adopted { background: #d1f7ff; color: #0c5460; }
+
+    /* Role Badges */
+    .role-badge {
+        padding: 0.4rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    .role-user { background: #e3f2fd; color: #1976d2; }
+    .role-admin { background: #fff3e0; color: #f57c00; }
+    .role-shelter { background: #e8f5e8; color: #388e3c; }
+
+    /* Loading State */
+    .loading-state {
+        text-align: center;
+        padding: 3rem;
+        color: #6c757d;
+    }
+
+    /* Text Muted */
+    .text-muted {
+        color: #6c757d !important;
+        font-size: 0.875rem;
+    }
+}
