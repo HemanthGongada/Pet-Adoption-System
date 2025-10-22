@@ -93,8 +93,12 @@ Git
  ROLE_ADMIN	                        Full access, including pet management, adoption request management, and access to admin dashboard/reports.
 
 
- Video link of the project
+ Demo link for the project
  https://youtu.be/AkLVMMvlY-A
+
+
+ --use only desktops to open this--
+ http://care4pets.s3-website.eu-north-1.amazonaws.com
 
  For any queries
  hemanthgongada134@gmail.com
